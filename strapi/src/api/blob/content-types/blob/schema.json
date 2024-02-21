@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blobs",
+  "info": {
+    "singularName": "blob",
+    "pluralName": "blobs",
+    "displayName": "Blob",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "richtext",
+      "required": true
+    },
+    "Workday": {
+      "type": "integer",
+      "unique": true,
+      "required": false
+    },
+    "Week": {
+      "type": "integer",
+      "unique": false,
+      "required": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "blob"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technologie.technologie",
+      "mappedBy": "blob"
+    }
+  }
+}

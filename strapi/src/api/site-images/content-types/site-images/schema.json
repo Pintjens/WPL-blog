@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "requiring_a_pluralized_api_id_for_a_singletype_is_a_compleatly_absurt_concept_strapi_wth_where_your_disigners_smoking_when_the_came_up_with_this_brainfart",
+  "info": {
+    "singularName": "site-images",
+    "pluralName": "requiring-a-pluralized-api-id-for-a-singletype-is-a-compleatly-absurt-concept-strapi-wth-where-your-disigners-smoking-when-the-came-up-with-this-brainfart",
+    "displayName": "SiteImages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "defaultShopItem": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

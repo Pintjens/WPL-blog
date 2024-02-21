@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "singularName": "note",
+    "pluralName": "notes",
+    "displayName": "Note",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "notes"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technologie.technologie",
+      "inversedBy": "notes"
+    },
+    "Text": {
+      "type": "text",
+      "required": true
+    },
+    "Workday": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "Week": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
