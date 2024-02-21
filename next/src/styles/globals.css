@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You scared me into doing almost 3 days of css/design/responsiveness */
+/* Just to get 2 or 3 "extra" points */
+/* So I reallyyy hope that it has been worth the effort */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  background-color: rgba(11, 75, 91, 0.815);
+  min-height: 100vh;
+}
+h1{
+  font-size: 2.1rem;
+}
+h2{
+  font-size: 1.11rem;
+}
+.profilePic{
+  height: 15rem;
+}
+#__next-build-watcher {
+  display: none;
+}
+#__next-route-announcer__{
+  display: none !important;
+}
+.link {
+  margin: 1.2rem;
+  border: 1.5px solid rgb(84, 90, 75);
+  border-radius: 0.6rem;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 1.8s;
+}
+.link:hover{
+  border-color: purple;
+  transform: scale(102%);
+  transition: 0.6s;
+}
+.blobShort{
+  padding: 1.2rem 3.3rem;
+}
+.narrow-screen-link{
+  display: none;
+}
+
+.blogNav{
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  border: 0.12rem rgb(117, 59, 171) solid;
+  border-radius: 1.2rem;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.blogNav > section{
+  display: flex;
+  flex-direction: column;
+}
+.blogNav p{
+  font-size: larger;
+  font-weight: bolder;
+  color: rgb(35, 155, 155);
+}
+.blogNav div{
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.6rem;
+}
+.blogNav div * {
+  text-decoration: underline;
+  color: rgb(166, 0, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@media screen and (max-width: 564px){
+  .blobShort {
+    padding: 1.2rem;
+  }
+  h1{
+    font-size: 1.2rem;
+  }
+  .wide-screen-link{
+    display: none;
+  }
+  .narrow-screen-link{
+    display: block;
+  }
+}
+
+
+.catch-me-if-you-can{
+  -webkit-transition-property: visibility;
+  -webkit-transition-delay: 1.5s;
+  /* Its just no fun without hidden features =) */
+}
+footer:hover .catch-me-if-you-can{
+  visibility: hidden;
+  -webkit-transition-property: visibility;
+  /* this makes sure you are able to reach the page by quickly pressing the disappearing link (if you really wanted to)*/
+  -webkit-transition-delay: 0.12s;
+}
+
+.see-me-if-you-didnt{
+  font-size: xx-small;
+  visibility: hidden;
+  -webkit-transition-delay: 1.2s;
+}
+footer:hover .see-me-if-you-didnt{
+  visibility: visible;
+  -webkit-transition-property: visibility;
+  -webkit-transition-delay: 0.24s; 
+}
+  
+@media screen and (max-width: 414px){
+  h2{
+    font-size: 0.99rem;
+  }
+  .link{
+    padding: 0.6rem;
+  }
+  .ph-disp-none{
+    display: none;
+  }
+  .blobShort{
+    margin: 0 !important;
+    margin-top: 0.6rem !important;
+    padding: 0.6rem;
+    border-width: 2.1px;
+  }
+.profilePic{
+    height: 9rem;
+  }
+}
