@@ -141,7 +141,7 @@ const Layout = ({ children } : {children: ReactElement}/*, {siteImage : siteImag
 
             <Footer  className="w-full dark:border-neutral-900 lg:border lg:dark:bg-zinc-600/30" >
                 
-                <div>
+                <div style={{fontSize: "small", marginLeft: 12}}>
                     Last Site Update: <div className="unix"></div>
                     {process.env.lastDeployment}
                     </div>
